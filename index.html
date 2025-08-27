@@ -1,177 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kouter Studios - Diseño y Programación</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
-    <!-- Fuente de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Iconos (Font Awesome) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kouter Studios - Diseño y Programación</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+
+  <!-- Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="container">
-            <h2 class="logo">Kouter Studios</h2>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#portafolio">Portafolio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-                <div class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h2 class="logo">Kouter Studios</h2>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#portafolio">Portafolio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
         </div>
-    </header>
-
-    <!-- Sección de Inicio -->
-    <section id="inicio" class="hero">
-        <div class="container">
-            <h1>Diseño y Programación <span>de Alto Impacto</span></h1>
-            <p>Transformamos ideas en experiencias digitales extraordinarias.</p>
-            <a href="#contacto" class="btn">¡Hablemos!</a>
-        </div>
-    </section>
-
-    <!-- Sección de Servicios -->
-    <section id="servicios" class="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Desarrollo Web</h3>
-                    <p>Sitios web modernos, rápidos y responsive.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-palette"></i>
-                    <h3>Diseño UI/UX</h3>
-                    <p>Interfaces intuitivas y atractivas para tus usuarios.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Apps Móviles</h3>
-                    <p>Aplicaciones nativas e híbridas para iOS y Android.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Otras secciones (Portafolio, Nosotros, Contacto) -->
-    <section id="portafolio" class="portfolio">
-        <div class="container">
-            <h2>Nuestro Trabajo</h2>
-            <p>Algunos de nuestros proyectos destacados.</p>
-            <!-- Aquí irían tarjetas de portafolio -->
-        </div>
-    </section>
-
-    <section id="nosotros" class="about">
-        <div class="container">
-            <h2>¿Quiénes Somos?</h2>
-            <p>Un equipo apasionado por la tecnología y el diseño.</p>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contacto</h2>
-            <form>
-                <input type="text" placeholder="Nombre" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Mensaje" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-    <!-- Agrega esto antes del </body> en tu index.html -->
-<!-- Modal de Registro -->
-<div id="registerModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>¡Obtén 20% de Descuento!</h2>
-        <p class="modal-subtitle">Regístrate por primera vez y obtén un código de descuento inmediato</p>
-        
-        <form id="registerForm" class="auth-form">
-            <div class="form-group">
-                <input type="text" id="registerName" placeholder="Nombre completo" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
-            </div>
-            <div class="form-group">
-                <input type="password" id="registerPassword" placeholder="Contraseña" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Registrarme y Obtener Descuento</button>
-        </form>
-        
-        <div class="auth-footer">
-            <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Iniciar sesión</a></p>
-        </div>
+      </nav>
     </div>
-</div>
+  </header>
 
-<!-- Modal de Login -->
-<div id="loginModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h2>Iniciar Sesión</h2>
-        
-        <form id="loginForm" class="auth-form">
-            <div class="form-group">
-                <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
-            </div>
-            <div class="form-group">
-                <input type="password" id="loginPassword" placeholder="Contraseña" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-        </form>
-        
-        <div class="auth-footer">
-            <p>¿Primera vez? <a href="#" id="showRegister">Regístrate y obtén 20% off</a></p>
-        </div>
+  <!-- Sección de Inicio -->
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h1>Diseño y Programación <span>de Alto Impacto</span></h1>
+      <p>Transformamos ideas en experiencias digitales extraordinarias.</p>
+      <a href="#contacto" class="btn">¡Hablemos!</a>
     </div>
-</div>
+  </section>
 
-<!-- Modal de Descuento -->
-<div id="discountModal" class="modal">
+  <!-- Sección de Servicios -->
+  <section id="servicios" class="services">
+    <div class="container">
+      <h2>Nuestros Servicios</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Desarrollo Web</h3>
+          <p>Sitios web modernos, rápidos y responsive.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-palette"></i>
+          <h3>Diseño UI/UX</h3>
+          <p>Interfaces intuitivas y atractivas para tus usuarios.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Apps Móviles</h3>
+          <p>Aplicaciones nativas e híbridas para iOS y Android.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio -->
+  <section id="portafolio" class="portfolio">
+    <div class="container">
+      <h2>Nuestro Trabajo</h2>
+      <p>Algunos de nuestros proyectos destacados.</p>
+      <!-- Aquí irían tarjetas de portafolio -->
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="about">
+    <div class="container">
+      <h2>¿Quiénes Somos?</h2>
+      <p>Un equipo apasionado por la tecnología y el diseño.</p>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==========================
+       MODALES DE AUTENTICACIÓN
+       ========================== -->
+  
+  <!-- Modal de Registro -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>¡Obtén 20% de Descuento!</h2>
+      <p class="modal-subtitle">Regístrate por primera vez y obtén un código de descuento inmediato</p>
+      
+      <form id="registerForm" class="auth-form">
+        <div class="form-group">
+          <input type="text" id="registerName" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="registerEmail" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="registerPassword" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Registrarme y Obtener Descuento</button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Iniciar sesión</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Login -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Iniciar Sesión</h2>
+      
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <input type="email" id="loginEmail" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="loginPassword" placeholder="Contraseña" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+      </form>
+      
+      <div class="auth-footer">
+        <p>¿Primera vez? <a href="#" id="showRegister">Regístrate y obtén 20% off</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Descuento -->
+  <div id="discountModal" class="modal">
     <div class="modal-content discount-content">
-        <span class="close-modal">&times;</span>
-        <div class="discount-icon">🎉</div>
-        <h2>¡Felicidades!</h2>
-        <p class="discount-text">Por ser tu primera vez, tienes un <strong>20% de descuento</strong></p>
-        <div class="discount-code">
-            <span id="discountCode">KOUTER20</span>
-            <button class="btn-copy" onclick="copyDiscountCode()">Copiar</button>
-        </div>
-        <p class="discount-info">Usa este código en tu próxima compra</p>
+      <span class="close-modal">&times;</span>
+      <div class="discount-icon">🎉</div>
+      <h2>¡Felicidades!</h2>
+      <p class="discount-text">Por ser tu primera vez, tienes un <strong>20% de descuento</strong></p>
+      
+      <div class="discount-code">
+        <span id="discountCode">KOUTER20</span>
+        <button class="btn-copy" onclick="copyDiscountCode()">Copiar</button>
+      </div>
+      
+      <p class="discount-info">Usa este código en tu próxima compra</p>
     </div>
-</div>
+  </div>
 
-<!-- Botón flotante de Login -->
-<div class="floating-auth">
+  <!-- Botón flotante de Login/Registro -->
+  <div class="floating-auth">
     <button class="floating-btn" onclick="showRegisterModal()">
-        <i class="fas fa-user-plus"></i>
-        <span>Obtener Descuento</span>
+      <i class="fas fa-user-plus"></i>
+      <span>Obtener Descuento</span>
     </button>
-</div>
+  </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2023 Kouter Studios. Todos los derechos reservados.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2023 Kouter Studios. Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="script.js"></script>
-    <script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script>
     // Inicializar EmailJS con tu USER ID
     emailjs.init("TU_USER_ID_DE_EMAILJS");
-</script>
+  </script>
 </body>
 </html>
