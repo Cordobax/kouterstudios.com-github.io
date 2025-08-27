@@ -550,3 +550,207 @@ body.loaded {
         transition-delay: 0.1s;
     }
 }
+/* ===== MODALES ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: var(--primary);
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.modal-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 2rem;
+}
+
+/* Formularios */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group input {
+    padding: 1rem 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.1);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Descuento especial */
+.discount-content {
+    text-align: center;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    color: white;
+}
+
+.discount-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.discount-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.discount-code {
+    background: white;
+    color: var(--primary);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-copy {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-copy:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.discount-info {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Botón flotante */
+.floating-auth {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.floating-btn {
+    background: linear-gradient(135deg, var(--primary), #1e40af);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 2rem;
+        width: 95%;
+    }
+    
+    .floating-btn span {
+        display: none;
+    }
+    
+    .floating-btn {
+        padding: 1rem;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+    }
+}
